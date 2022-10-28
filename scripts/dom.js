@@ -1,23 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/styles/globalStyles.css">
-    <link rel="stylesheet" href="/styles/buttons.css">
-    <link rel="stylesheet" href="/styles/fonts.css">
-    <link rel="stylesheet" href="/styles/posts.css">
-    <link rel="stylesheet" href="index.css">
-    <title>Living</title>
-</head>
-<body>
-    <header class="container">
-        <h1>Living</h1>
-        <button class="button-grey" id="homeButton">Home</button>
-    </header>
-    <main>
-        <!-- <section class="fullPost">
+import { setPostId } from "./localStorage.js";
+
+export function createNewsElement(notice){
+    const {title, description, image, id} = notice;
+    const post = document.createElement("li");
+    post.classList.add("post");
+    post.id = id;
+    post.insertAdjacentHTML("afterbegin",`
+        <img src=${image} alt=${title}>
+        <h2>${title}</h2>
+        <p>${description}</p>          
+    `);
+    const anchor = document.createElement("a");
+    anchor.innerText = "Acessar conteúdo"
+    anchor.addEventListener("click",(event)=>{
+        setPostId(id);
+        localStorage.removeItem("@Living:category");
+        window.location.replace("/pages/post/index.html");
+    });
+    post.appendChild(anchor);
+    return post;
+}
+
+export function createFullNewsElement(notice){
+    const {title, description, image, content} = notice;
+    const post = document.createElement("section");
+    post.classList.add("fullPost");
+    post.insertAdjacentHTML("afterbegin",`
+        <header>
+            <div class="container">
+                <h2>${title}</h2>
+                <p>${description}</p>
+            </div>  
+        </header>
+        <div class="container">
+            <img src=${image} alt="${title}">
+            <p>${content}</p>            
+        </div>         
+    `);
+    return post;
+}
+
+
+
+
+{/* <section class="fullPost">
             <header>
                 <div class="container">
                     <h2>Cuidados para manter com plantas dentro de apartamentos</h2>
@@ -32,18 +58,4 @@
                         
                         There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>            
             </div>        
-        </section> -->
-    </main>
-    <nav class="container">
-        <!-- <button class="button-grey">Todos</button> -->
-    </nav>
-    <footer>
-        <div class="container">
-            <h2>Living</h2>
-            <p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software.</p>
-            <a href="#body">Voltar para o topo</a>
-        </div>
-    </footer>
-    <script src="index.js" type="module"></script>
-</body>
-</html>
+        </section> */}

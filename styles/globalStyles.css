@@ -1,21 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Inter;
+}
+img{
+  width: 100%;
+}
+ul{
+  list-style: none;
 }
 
 :root {
-  --color-grey-100: #212529;
-  --color-grey-200: #495057;
-  --color-grey-300: #808387;
-  --color-grey-400: #dee2e6;
-  --color-grey-500: #e9ecef;
-  --color-grey-600: #f1f3f5;
-  --color-grey-700: #f8f9fa;
-  --color-brand-100: #087f5b;
-  --color-brand-200: #099268;
-  --font-size-1: 2.5rem;
-  --font-size-2: 1.75rem;
-  --font-size-3: 1.25rem;
-  --font-size-4: 1rem;
+  --grey100: #212529;
+  --grey200: #495057;
+  --grey300: #808387;
+  --grey400: #dee2e6;
+  --grey500: #e9ecef;
+  --grey600: #f1f3f5;
+  --grey700: #f8f9fa;
+  --brand100: #087f5b;
+  --brand200: #099268;
+  
+  --font-size-1: 2.5rem; 
+  --font-size-2: 1.75rem; 
+  --font-size-3: 1.25rem; 
+  --font-size-4: 1rem; 
+
+  --font-weight-1: 700;
+  --font-weight-2: 600;
+  --font-weight-3: 400;
+
+  --line-height: 150%;
+
+  --radius: 2rem;
 }

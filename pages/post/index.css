@@ -1,1 +1,10 @@
-/* Desenvolva seu estilo aqui */
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav{
+    margin: 6.25rem 0 4.5rem 0;
+    display: flex;
+    gap: 1.25rem;    
+}

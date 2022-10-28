@@ -1,0 +1,25 @@
+.font-1-semibold{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-1);
+    line-height: var(--line-height);
+}
+.font-2-bold{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+    line-height: var(--line-height);
+}
+.font-3-semibold{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-3);
+    line-height: var(--line-height);
+}
+.font-4-semibold{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-4);
+    line-height: var(--line-height);
+}
+.font-4-regular{
+    font-weight: var(--font-weight-3);
+    font-size: var(--font-size-4);
+    line-height: var(--line-height);
+}
