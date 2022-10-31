@@ -7,10 +7,11 @@ export function createNewsElement(notice){
     post.id = id;
     post.insertAdjacentHTML("afterbegin",`
         <img src=${image} alt=${title}>
-        <h2>${title}</h2>
-        <p>${description}</p>          
+        <h2 class="font-3-semibold">${title}</h2>
+        <p class="font-4-regular grey-200">${description}</p>          
     `);
     const anchor = document.createElement("a");
+    anchor.className = "font-4-semibold brand-100"
     anchor.innerText = "Acessar conteúdo"
     anchor.addEventListener("click",(event)=>{
         setPostId(id);
@@ -28,13 +29,13 @@ export function createFullNewsElement(notice){
     post.insertAdjacentHTML("afterbegin",`
         <header>
             <div class="container">
-                <h2>${title}</h2>
-                <p>${description}</p>
+                <h2 class="font-1-semibold">${title}</h2>
+                <p class="font-4-regular grey-200">${description}</p>
             </div>  
         </header>
         <div class="container">
             <img src=${image} alt="${title}">
-            <p>${content}</p>            
+            <p class="font-4-regular grey-200">${content}</p>            
         </div>         
     `);
     return post;

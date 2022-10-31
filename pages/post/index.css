@@ -2,9 +2,32 @@
     max-width: 1140px;
     margin: 0 auto;
 }
-
+body > header{
+    display: flex;
+    justify-content: space-between;
+    height: 98px;
+    align-items: center;
+}
 nav{
-    margin: 6.25rem 0 4.5rem 0;
     display: flex;
     gap: 1.25rem;    
+}
+footer{
+    margin-top: 87px;
+    height: 255px; 
+    background-color: var(--grey100);
+    color: var(--grey700);
+    display: flex;
+    align-items: center;
+}
+footer > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 225px;
+}
+footer > div > div{
+    display: flex;
+    align-items: center;
+    gap: 54px;
 }

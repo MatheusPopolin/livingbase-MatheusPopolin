@@ -13,7 +13,8 @@ function homeButton(){
 homeButton();
 
 async function findNotice(id){
-    const news = await getNews();
+    let news = await getNews(0);
+    news = [...news, ...await getNews(1), ...await getNews(2)];
     const notice = news.find(notice=>notice.id===id);
     return notice;   
 }
@@ -29,7 +30,8 @@ renderFullNew();
 
 async function renderNavButton(){
     const nav = document.querySelector("nav");
-    const news = await getNews();
+    let news = await getNews(0);
+    news = [...news, ...await getNews(1), ...await getNews(2)];
     let categories = ["Todos"];
     news.forEach(notice=>{
         if(!categories.find(category=>category===notice.category)){
@@ -38,7 +40,7 @@ async function renderNavButton(){
     })
     categories.forEach(category=>{
         const button = document.createElement("button");
-        button.classList.add("button-grey");
+        button.className = "button-grey font-4-semibold";
         button.innerText = category;
         button.addEventListener("click",async ()=>{
             setCategory(category);

@@ -1,3 +1,6 @@
+body{
+    margin-top: 75px;
+}
 .container{
     max-width: 1140px;
     margin: 0 auto;
@@ -7,10 +10,18 @@ body > section{
     align-items: center;
     gap: 8.75rem;
 }
+body > section > div{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
 nav{
     margin: 6.25rem 0 4.5rem 0;
     display: flex;
     gap: 1.25rem;    
+}
+main{
+    position: relative;    
 }
 ul{
     display: flex;
@@ -18,10 +29,25 @@ ul{
     gap: 2.75rem;    
     margin-bottom: 4.5rem;
 }
+.observer{
+    position: absolute;
+    bottom: 0;
+}
 footer{
     height: 255px; 
     background-color: var(--grey100);
     color: var(--grey700);
     display: flex;
     align-items: center;
+}
+footer > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 225px;
+}
+footer > div > div{
+    display: flex;
+    align-items: center;
+    gap: 54px;
 }
